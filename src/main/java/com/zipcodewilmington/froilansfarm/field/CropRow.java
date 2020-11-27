@@ -12,5 +12,7 @@ public class CropRow {
         listOfCrop = new ArrayList<Crop>(20);
     }
 
-
+    public ArrayList<Crop> getListOfCrop() {
+        return listOfCrop;
+    }
 }

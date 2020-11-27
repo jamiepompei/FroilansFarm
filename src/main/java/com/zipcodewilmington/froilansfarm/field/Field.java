@@ -20,4 +20,7 @@ public class Field {
         rows.add(cropRow5);
     }
 
+    public ArrayList<CropRow> getRows() {
+        return rows;
+    }
 }
