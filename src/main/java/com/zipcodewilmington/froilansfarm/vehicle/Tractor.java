@@ -5,6 +5,14 @@ public class Tractor extends FarmVehicle{
         return null;
     }
 
+    public Boolean getIsBeingRidden() {
+        return null;
+    }
+
+    public void setIsBeingRidden(Boolean isBeingRidden) {
+
+    }
+
     //
 
 

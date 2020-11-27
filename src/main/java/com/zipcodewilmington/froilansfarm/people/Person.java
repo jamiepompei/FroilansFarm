@@ -20,19 +20,33 @@ public class Person implements Rider, Eater {
     public Boolean mountHorse(Horse horse) {
         if(!horse.getIsBeingRidden()){
             horse.setIsBeingRidden(true);
+            return true;
         }
-        return null;
+        return false;
     }
 
     public Boolean dismountHorse(Horse horse) {
-        return null;
+        if(horse.getIsBeingRidden()){
+            horse.setIsBeingRidden(false);
+            return true;
+        }
+        return false;
     }
 
     public Boolean mountVehicle(Vehicle vehicle) {
-        return null;
+        if(!vehicle.getIsBeingRidden()){
+            vehicle.setIsBeingRidden(true);
+            return true;
+        }
+        return false;
+
     }
 
     public Boolean dismountVehicle(Vehicle vehicle) {
-        return null;
+        if(vehicle.getIsBeingRidden()){
+            vehicle.setIsBeingRidden(false);
+            return true;
+        }
+        return false;
     }
 }
