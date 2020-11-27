@@ -6,7 +6,7 @@ import com.zipcodewilmington.froilansfarm.field.Squash;
 import com.zipcodewilmington.froilansfarm.field.Tomato;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+
 
 public class Silo {
 
@@ -30,5 +30,15 @@ public class Silo {
 
     public static ArrayList<Egg> getArrListEgg() {
         return arrListEgg;
+    }
+
+    public static void addFood(){
+        for(int i= 0; i<100; i++){
+            arrListCorn.add(new Corn());
+        }
+        for(int i= 0; i<10; i++){
+            arrListEgg.add(new Egg());
+            arrListTomato.add(new Tomato());
+        }
     }
 }

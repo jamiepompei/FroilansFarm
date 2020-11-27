@@ -5,7 +5,4 @@ import com.zipcodewilmington.froilansfarm.interfaces.Ridable;
 
 public abstract class Vehicle implements NoiseMaker, Ridable {
 
-
-
-
 }
