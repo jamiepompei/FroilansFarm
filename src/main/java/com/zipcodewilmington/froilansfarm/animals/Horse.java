@@ -13,7 +13,7 @@ public class Horse extends Animal implements Ridable {
     public String eat() {
 
         for (int i = 0; i <= 3; i++) {
-            Silo.getArrListCorn().remove(0);
+            Silo.getArrListCorn().remove(Silo.getArrListCorn().size()-1);
         }
         return "Chomp";
     }

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class Chicken extends Animal implements Produce {
 
     public String eat() {
-        Silo.getArrListCorn().remove(0);
+        Silo.getArrListCorn().remove(Silo.getArrListCorn().size()-1);
         return "bok bok";
     }
 
@@ -20,4 +20,6 @@ public class Chicken extends Animal implements Produce {
      Silo.arrListEgg.add(new Egg());
     return new Egg();
     }
+
+
 }

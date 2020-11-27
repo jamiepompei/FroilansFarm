@@ -9,7 +9,6 @@ public class Person implements Rider, Eater {
 
 
     public String eat() {
-
         return "So full!";
     }
 
