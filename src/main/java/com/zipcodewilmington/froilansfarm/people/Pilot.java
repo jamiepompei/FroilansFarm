@@ -2,7 +2,7 @@ package com.zipcodewilmington.froilansfarm.people;
 
 import com.zipcodewilmington.froilansfarm.interfaces.Flyer;
 
-public class Pilot extends Person implements Flyer {
+public class Pilot extends Person  {
 
     private String name;
 
@@ -10,8 +10,6 @@ public class Pilot extends Person implements Flyer {
         this.name = "Froilanda";
     }
 
-    public void fly() {
-    }
 
     public String getName() {
         return name;

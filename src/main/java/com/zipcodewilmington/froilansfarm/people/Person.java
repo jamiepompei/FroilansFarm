@@ -1,10 +1,11 @@
 package com.zipcodewilmington.froilansfarm.people;
 
+import com.zipcodewilmington.froilansfarm.animals.Horse;
 import com.zipcodewilmington.froilansfarm.interfaces.Eater;
 import com.zipcodewilmington.froilansfarm.interfaces.Rider;
+import com.zipcodewilmington.froilansfarm.vehicle.Vehicle;
 
 public class Person implements Rider, Eater {
-
 
 
     public String eat() {
@@ -16,11 +17,22 @@ public class Person implements Rider, Eater {
 
     }
 
-    public Boolean mount() {
+    public Boolean mountHorse(Horse horse) {
+        if(!horse.getIsBeingRidden()){
+            horse.setIsBeingRidden(true);
+        }
         return null;
     }
 
-    public Boolean dismount() {
+    public Boolean dismountHorse(Horse horse) {
+        return null;
+    }
+
+    public Boolean mountVehicle(Vehicle vehicle) {
+        return null;
+    }
+
+    public Boolean dismountVehicle(Vehicle vehicle) {
         return null;
     }
 }
