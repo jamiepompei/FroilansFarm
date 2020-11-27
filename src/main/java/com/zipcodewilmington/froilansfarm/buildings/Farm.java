@@ -24,7 +24,25 @@ public class Farm {
         field = new Field();
         farmHouse = new FarmHouse();
         silo = new Silo();
-
     }
 
+    public ArrayList<ChickenCoop> getChickenCoop() {
+        return chickenCoop;
+    }
+
+    public ArrayList<Stable> getStable() {
+        return stable;
+    }
+
+    public Field getField() {
+        return field;
+    }
+
+    public FarmHouse getFarmHouse() {
+        return farmHouse;
+    }
+
+    public Silo getSilo() {
+        return silo;
+    }
 }

@@ -2,6 +2,7 @@ package com.zipcodewilmington.froilansfarm.field;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class CropRow {
 
@@ -9,8 +10,9 @@ public class CropRow {
 
 
     public CropRow(Crop crop){
-        listOfCrop = new ArrayList<Crop>(20);
+        listOfCrop = new ArrayList<Crop> (Arrays.asList(crop, crop, crop, crop, crop));
     }
+
 
     public ArrayList<Crop> getListOfCrop() {
         return listOfCrop;

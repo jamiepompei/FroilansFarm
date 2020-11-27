@@ -6,6 +6,7 @@ import com.zipcodewilmington.froilansfarm.interfaces.Produce;
 public abstract class Crop implements Produce {
     Boolean isFertilized;
     Boolean isPlanted;
+    Boolean isHarvested;
 
     public Boolean getFertilized() {
         return isFertilized;
@@ -21,5 +22,9 @@ public abstract class Crop implements Produce {
 
     public void setPlanted(Boolean planted) {
         isPlanted = planted;
+    }
+
+    public Boolean getHarvested() {
+        return isHarvested;
     }
 }
