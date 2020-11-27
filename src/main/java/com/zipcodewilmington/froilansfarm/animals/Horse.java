@@ -5,7 +5,7 @@ import com.zipcodewilmington.froilansfarm.interfaces.Ridable;
 
 public class Horse extends Animal implements Ridable {
     Boolean isBeingRidden;
-    Silo silo;
+
 
     public Horse() {
     }
@@ -13,7 +13,7 @@ public class Horse extends Animal implements Ridable {
     public String eat() {
 
         for (int i = 0; i <= 3; i++) {
-            silo.getArrListCorn().remove(0);
+            Silo.getArrListCorn().remove(0);
         }
         return "Chomp";
     }

@@ -6,11 +6,9 @@ import com.zipcodewilmington.froilansfarm.interfaces.Produce;
 import java.util.ArrayList;
 
 public class Chicken extends Animal implements Produce {
-    Silo silo;
-
 
     public String eat() {
-        silo.getArrListCorn().remove(0);
+        Silo.getArrListCorn().remove(0);
         return "bok bok";
     }
 
@@ -19,6 +17,7 @@ public class Chicken extends Animal implements Produce {
     }
 
     public Object yield() {
-        return new Egg();
+     Silo.arrListEgg.add(new Egg());
+    return new Egg();
     }
 }
