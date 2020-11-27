@@ -8,6 +8,9 @@ public class SquashPlant extends Crop{
 
     public SquashPlant(){
         squash = new Squash();
+        setFertilized(false);
+        setPlanted(false);
+        setHarvested(true);
     }
 
 

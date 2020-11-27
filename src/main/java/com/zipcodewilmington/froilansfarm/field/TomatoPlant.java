@@ -6,7 +6,11 @@ public class TomatoPlant extends Crop{
     Tomato tomato;
 
     public TomatoPlant(){
+
         tomato = new Tomato();
+        setFertilized(false);
+        setPlanted(false);
+        setHarvested(true);
     }
 
 

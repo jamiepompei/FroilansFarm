@@ -6,9 +6,11 @@ public class CornStalk extends Crop{
     Corn corn;
 
     public CornStalk(){
-       corn = new Corn();
+        setFertilized(false);
+        setPlanted(false);
+        setHarvested(true);
+        corn = new Corn();
     }
-
 
    public Corn yield() {
         return corn;

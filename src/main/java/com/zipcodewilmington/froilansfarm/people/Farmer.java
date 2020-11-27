@@ -9,8 +9,8 @@ public class Farmer extends Person implements Botanist {
     Field field;
 
 
-    public Farmer(){
-       this.name = "Froilan";
+    public Farmer() {
+        this.name = "Froilan";
     }
 
     public String getName() {
@@ -19,8 +19,12 @@ public class Farmer extends Person implements Botanist {
 
     public void plant(Integer rowNum) {
 
-        if(field.getRows().get(rowNum-1).getListOfCrop().get(0).getHarvested()){
-            field.getRows().get(rowNum-1).getListOfCrop().get(0).setPlanted(true);
+        for (Crop c : field.getRows().get(rowNum - 1).getListOfCrop()
+        ) {
+            if (c.getHarvested()) {
+                c.setPlanted(true);
+                c.setHarvested(false);
+            }
         }
     }
 }
