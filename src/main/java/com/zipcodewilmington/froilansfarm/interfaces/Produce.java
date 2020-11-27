@@ -4,5 +4,5 @@ import java.util.ArrayList;
 
 public interface Produce {
 
-    ArrayList<Object>yield(Integer numOfYields);
+    Object yield();
 }
