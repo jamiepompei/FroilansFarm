@@ -1,7 +1,9 @@
 package com.zipcodewilmington.froilansfarm;
 
+import com.zipcodewilmington.froilansfarm.animals.Horse;
 import com.zipcodewilmington.froilansfarm.buildings.Farm;
 import com.zipcodewilmington.froilansfarm.buildings.Silo;
+import com.zipcodewilmington.froilansfarm.buildings.Stable;
 import com.zipcodewilmington.froilansfarm.people.Farmer;
 import com.zipcodewilmington.froilansfarm.people.Pilot;
 import org.junit.Assert;
@@ -98,6 +100,31 @@ public class TestMonday {
         Assert.assertFalse(farm.getCropDuster().getIsBeingRidden());
         Assert.assertFalse(farm.getCropDuster().getIsBeingRidden());
 
+    }
+
+    @Test
+    public void testRideTheHorses() {
+
+        for (Stable stable : farm.getStable()) {
+            for (Horse horse : stable.getHorses()) {
+                Froilan.mountHorse(horse);
+                Assert.assertTrue(horse.getIsBeingRidden());
+                Froilan.dismountHorse(horse);
+                Assert.assertFalse(horse.getIsBeingRidden());
+            }
+        }
+    }
+
+    @Test
+    public void testFeedHorses() {
+        Integer expectedSizeCorn = Silo.getArrListCorn().size() - 30;
+        for (Stable stable : farm.getStable()) {
+            for (Horse horse : stable.getHorses()) {
+                horse.eat();
+            }
+        }
+        Integer actualSizeCorn = Silo.getArrListCorn().size();
+        Assert.assertEquals(expectedSizeCorn, actualSizeCorn);
     }
 
 }

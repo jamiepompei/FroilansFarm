@@ -22,6 +22,7 @@ public class Tractor extends FarmVehicle{
     }
 
     public void setIsBeingRidden(Boolean isBeingRidden) {
+        this.isBeingRidden= isBeingRidden;
 
     }
     public void harvest(Integer rowNum, Farm farm) {
