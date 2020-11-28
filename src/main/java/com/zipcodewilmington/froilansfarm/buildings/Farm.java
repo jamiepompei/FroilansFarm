@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm.buildings;
 
+import com.zipcodewilmington.froilansfarm.field.Crop;
 import com.zipcodewilmington.froilansfarm.field.Field;
 import com.zipcodewilmington.froilansfarm.vehicle.CropDuster;
 import com.zipcodewilmington.froilansfarm.vehicle.Tractor;
@@ -27,6 +28,9 @@ public class Farm {
 
         field = new Field();
         farmHouse = new FarmHouse();
+
+        cropDuster = new CropDuster();
+        tractor = new Tractor();
 
     }
 

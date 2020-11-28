@@ -1,11 +1,16 @@
 package com.zipcodewilmington.froilansfarm.vehicle;
 
+import com.zipcodewilmington.froilansfarm.buildings.Farm;
 import com.zipcodewilmington.froilansfarm.buildings.Silo;
 import com.zipcodewilmington.froilansfarm.field.*;
 
 public class Tractor extends FarmVehicle{
     Boolean isBeingRidden;
-    Field field;
+
+
+    public Tractor(){
+        isBeingRidden = false;
+    }
 
 
     public String makeNoise() {
@@ -19,9 +24,9 @@ public class Tractor extends FarmVehicle{
     public void setIsBeingRidden(Boolean isBeingRidden) {
 
     }
-    public void harvest(Integer rowNum) {
+    public void harvest(Integer rowNum, Farm farm) {
 
-        for (Crop c : field.getRows().get(rowNum - 1).getListOfCrop()
+        for (Crop c : farm.getField().getRows().get(rowNum - 1).getListOfCrop()
         ) {
             if (c.getFertilized()) {
                 c.setPlanted(false);
