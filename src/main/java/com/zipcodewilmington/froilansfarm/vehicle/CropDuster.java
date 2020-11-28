@@ -21,6 +21,12 @@ public class CropDuster extends FarmVehicle implements Flyer {
         }
     }
 
+    public Boolean getFlying() {
+        return isFlying;
+    }
+
+
+
     public void land() {  //is already landed
             isFlying = false;
 

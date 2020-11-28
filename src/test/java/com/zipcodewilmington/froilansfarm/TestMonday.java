@@ -25,6 +25,9 @@ public class TestMonday {
         Froilan.plant(1, farm);
         Froilan.plant(2, farm);
         Froilan.plant(3, farm);
+        Froilan.plant(4, farm);
+        Froilan.plant(5, farm);
+
     }
 
     @Test
@@ -57,13 +60,44 @@ public class TestMonday {
 
 
     @Test
-    public void testCropDustSound() {
+    public void testCropDusterSound() {
         setup();
         String expected = "Annoyingly loud engine noisessss!!!";
         String actual = farm.getCropDuster().makeNoise();
         Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testCropDusterFertilize(){
+        setup();
+        Froilanda.mountVehicle(farm.getCropDuster());
+        farm.getCropDuster().fly();
+        farm.getCropDuster().fertilize(1, farm);
+        farm.getCropDuster().fertilize(2, farm);
+        farm.getCropDuster().fertilize(3, farm);
+        farm.getCropDuster().fertilize(4, farm);
+        farm.getCropDuster().fertilize(5, farm);
+        Assert.assertTrue(farm.getField().getRows().get(0).getListOfCrop().get(0).getFertilized());
+        Assert.assertTrue(farm.getField().getRows().get(1).getListOfCrop().get(0).getFertilized());
+        Assert.assertTrue(farm.getField().getRows().get(2).getListOfCrop().get(0).getFertilized());
+        Assert.assertTrue(farm.getField().getRows().get(3).getListOfCrop().get(0).getFertilized());
+        Assert.assertTrue(farm.getField().getRows().get(4).getListOfCrop().get(0).getFertilized());
 
     }
 
+    @Test
+    public void testCropDusterFly(){
+        setup();
+        Froilanda.mountVehicle(farm.getCropDuster());
+        farm.getCropDuster().fly();
+        Assert.assertTrue(farm.getCropDuster().getIsBeingRidden());
+        Assert.assertTrue(farm.getCropDuster().getFlying());
+
+        farm.getCropDuster().land();
+        Froilanda.dismountVehicle(farm.getCropDuster());
+        Assert.assertFalse(farm.getCropDuster().getIsBeingRidden());
+        Assert.assertFalse(farm.getCropDuster().getIsBeingRidden());
+
+    }
 
 }
