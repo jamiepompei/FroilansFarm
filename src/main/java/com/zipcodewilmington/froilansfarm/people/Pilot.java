@@ -24,7 +24,6 @@ public class Pilot extends Person  {
             Silo.getArrListCorn().remove(Silo.getArrListCorn().size()-1);
             Silo.getArrListEgg().remove(Silo.getArrListEgg().size()-1);
         }
-
         return "Stuffed!";
     }
 }

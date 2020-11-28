@@ -1,6 +1,9 @@
 package com.zipcodewilmington.froilansfarm.buildings;
 
 import com.zipcodewilmington.froilansfarm.field.Field;
+import com.zipcodewilmington.froilansfarm.vehicle.CropDuster;
+import com.zipcodewilmington.froilansfarm.vehicle.Tractor;
+import com.zipcodewilmington.froilansfarm.vehicle.Vehicle;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -10,7 +13,8 @@ public class Farm {
     private ArrayList<Stable> stable;
     private Field field;
     private FarmHouse farmHouse;
-    private Silo silo;
+    private CropDuster cropDuster;
+    private Tractor tractor;
 
 
     public Farm(){
@@ -23,7 +27,7 @@ public class Farm {
 
         field = new Field();
         farmHouse = new FarmHouse();
-        silo = new Silo();
+
     }
 
     public ArrayList<ChickenCoop> getChickenCoop() {
@@ -42,7 +46,11 @@ public class Farm {
         return farmHouse;
     }
 
-    public Silo getSilo() {
-        return silo;
+    public CropDuster getCropDuster() {
+        return cropDuster;
+    }
+
+    public Tractor getTractor() {
+        return tractor;
     }
 }

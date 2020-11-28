@@ -17,6 +17,7 @@ public class Person implements Rider, Eater {
     }
 
     public Boolean mountHorse(Horse horse) {
+
         if(!horse.getIsBeingRidden()){
             horse.setIsBeingRidden(true);
             return true;

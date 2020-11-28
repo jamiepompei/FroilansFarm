@@ -4,9 +4,9 @@ import com.zipcodewilmington.froilansfarm.interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.interfaces.Produce;
 
 public abstract class Crop implements Produce {
-    Boolean isFertilized;
-    Boolean isPlanted;
-    Boolean isHarvested;
+    Boolean isFertilized = false;
+    Boolean isPlanted = false;
+    Boolean isHarvested = false;
 
     public Boolean getFertilized() {
         return isFertilized;
